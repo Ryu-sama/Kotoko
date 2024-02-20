@@ -11,7 +11,7 @@ from nksama.plugins.paste import paste
 import speedtest
 from nksama.plugins.admin import is_admin as admin
 
-owner = 825664681
+owner = 6309601769
 
 
 @app.on_message(filters.user(owner) & filters.command("eval"))
