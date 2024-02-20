@@ -1,7 +1,6 @@
-from pyrogram import filters, Client
+from pyrogram import *
 from redis import Redis
 import os
-from pyrogram import *
 
 help_message = []
 
