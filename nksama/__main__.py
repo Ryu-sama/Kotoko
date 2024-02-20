@@ -1,15 +1,14 @@
-from nksama import bot
+from nksama import bot , musicbot
 import logging
-from pyrogram import *
 
-logging.basicConfig(
-    filename="log.txt",
-    level=logging.INFO,
-    filemode="a",
-    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-    datefmt='%H:%M:%S',
-)
-idle()
 
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    bot.run()
+    with bot:
+        bot.send_message(-1001544622735 , "I'm Now online")
+    
 
 
