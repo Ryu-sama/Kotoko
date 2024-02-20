@@ -136,16 +136,15 @@ def unpin(_, message):
 def kick(_, message):
     reply = message.reply_to_message
     if is_admin(message.chat.id, message.from_user.id) and reply:
-        bot.kick_chat_member(message.chat.id,
-                             message.reply_to_message.from_user.id)
-        bot.unban_chat_member(message.chat.id,
-                              message.reply_to_message.from_user.id)
-        message.reply('kick @{} !'.format(
-            message.reply_to_message.from_user.username))
-    elif reply.from_user.id == 6309601769:
-        message.reply('This Person is my owner!')
+        if reply.from_user and reply.from_user.id == 6309601769:
+            message.reply('This person is my owner!')
+        else:
+            bot.kick_chat_member(message.chat.id, reply.from_user.id)
+            bot.unban_chat_member(message.chat.id, reply.from_user.id)
+            message.reply(f'Kicked @{reply.from_user.username}!')
     else:
-        message.reply('You are not admin')
+        message.reply('You are not an admin or there is no reply.')
+
 
 
 @bot.on_message(filters.command('promote'))
