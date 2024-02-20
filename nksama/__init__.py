@@ -18,7 +18,7 @@ help_message = []
 
 API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
-TOKEN = "6911807700:AAH6ibUG_0YVJmULoZlioMIZyzRcUFTXWK4"
+TOKEN = "6854140351:AAG6pD_EJZS3GtbuQDtkbnbyb1IG3ApmFJA"
 
 bot = Client('kotoko',
              api_id=API_ID,
