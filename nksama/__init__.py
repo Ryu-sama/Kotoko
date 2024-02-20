@@ -26,5 +26,5 @@ bot = Client(
     api_hash=API_HASH,
     bot_token=TOKEN
 )
-bot.start()
+
 
