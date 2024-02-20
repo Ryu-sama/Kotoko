@@ -1,4 +1,4 @@
-from nksama import bot , musicbot
+from nksama import bot 
 import logging
 
 
