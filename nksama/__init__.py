@@ -20,11 +20,9 @@ API_ID = "14676558"
 API_HASH = "b3c4bc0ba6a4fc123f4d748a8cc39981"
 TOKEN = "6911807700:AAH6ibUG_0YVJmULoZlioMIZyzRcUFTXWK4"
 
-bot = Client(
-    'Slave',
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=TOKEN
-)
-
+bot = Client('kotoko',
+             api_id=API_ID,
+             api_hash=API_HASH,
+             bot_token=TOKEN,
+             plugins=dict(root=f"{__name__}/plugins"))
 
