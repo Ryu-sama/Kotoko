@@ -10,10 +10,5 @@ logging.basicConfig(
 )
 
 
-def main():
-    bot.run()
-    bot.send_message(-1001594147818, "He He He")
 
 
-if __name__ == "__main__":
-    main()
