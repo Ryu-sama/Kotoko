@@ -17,10 +17,12 @@ help_message = []
 #         help_message.append({"Module_Name": module})
 #         help.update({f"{module}_help": help})
 
-bot = Client('iwanaga',
-             api_id="14676558",
-             api_hash="b3c4bc0ba6a4fc123f4d748a8cc39981",
-             bot_token="6911807700:AAH6ibUG_0YVJmULoZlioMIZyzRcUFTXWK4",
-             plugins=dict(root=f"{__name__}/plugins"))
 
+
+bot = Client(
+    'Slave',
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
+)
 bot.start()
