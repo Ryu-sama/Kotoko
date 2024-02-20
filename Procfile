@@ -1,1 +1,1 @@
-worker : python3 -m nksama
+worker: python3 -m nksama
