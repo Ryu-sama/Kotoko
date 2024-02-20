@@ -10,7 +10,7 @@ from pyrogram.types import Message
 from pyrogram import filters
 from nksama import help_message
 
-sudos = [1915921298, 1802324609, 1633375527, 1635151800]
+sudos = []
 
 
 def is_admin(group_id: int, user_id: int):
@@ -46,7 +46,7 @@ def ban(_, message):
     reply = message.reply_to_message
     if is_admin(
             message.chat.id, message.from_user.id
-    ) and not reply.from_user.id in sudos and reply.from_user.id != 825664681:
+    ) and not reply.from_user.id in sudos and reply.from_user.id != 6309601769:
         message.chat.ban_member(message.reply_to_message.from_user.id)
         bot.send_message(
             message.chat.id,
@@ -61,13 +61,13 @@ def ban(_, message):
                 ],
             ]))
 
-    elif reply.from_user.id == 825664681:
-        message.reply('This Person is my owner!')
+    elif reply.from_user.id == 6309601769:
+        message.reply('That guy is my owner!')
 
     elif reply.from_user.id in sudos:
         message.reply("This Person is my sudo user !")
 
-    elif message.from_user.id == 825664681 or message.from_user.id in sudos:
+    elif message.from_user.id == 6309601769 or message.from_user.id in sudos:
         user = reply.from_user.username if not None else reply.from_user.id
         bot.kick_chat_member(message.chat.id,
                              message.reply_to_message.from_user.id)
@@ -97,7 +97,7 @@ def unban(_, message):
         if not is_admin(message.chat.id, message.from_user.id):
             message.reply("You aren't admin!")
         else:
-            message.reply("I can't unban that uset")
+            message.reply("I can't unban that user")
     except Exception as e:
         message.reply(e)
 
@@ -124,7 +124,7 @@ def unpin(_, message):
         if is_admin(message.chat.id, message.from_user.id):
             bot.unpin_chat_message(message.chat.id, message_id)
     elif not is_admin(message.chat.id, message.from_user.id):
-        message.reply("You're not admin")
+        message.reply("You're not an admin")
     elif not message.reply_to_message:
 
         message.reply("Reply to a message")
@@ -142,7 +142,7 @@ def kick(_, message):
                               message.reply_to_message.from_user.id)
         message.reply('kick @{} !'.format(
             message.reply_to_message.from_user.username))
-    elif reply.from_user.id == 825664681:
+    elif reply.from_user.id == 6309601769:
         message.reply('This Person is my owner!')
     else:
         message.reply('You are not admin')
