@@ -46,6 +46,6 @@ def start(_, message):
                              InlineKeyboardButton('help', callback_data="help")
                          ]]))
     if not message.chat.type == "private":
-        message.reply("Hello {message.from_user.mention} I'm Kotoko Iwanaga[.](https://telegra.ph/file/c34f0d3f93608eb5faa17.jpg)\nI'll help you to manage your groups at ease\nAdd Me in your Group with full rights i will be a good assistant!!",
+        message.reply("Hello!! I'm Kotoko Iwanaga[.](https://telegra.ph/file/c34f0d3f93608eb5faa17.jpg)\nI'll help you to manage your groups at ease\nAdd Me in your Group with full rights i will be a good assistant!!",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton('Help', callback_data="help")]]))
