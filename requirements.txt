@@ -8,7 +8,6 @@ dnspython
 motor<2.4.0,>=2.1.0
 speedtest-cli
 redis
-pytgcalls==3.0.0.dev19
 telegraph
 odmantic
 tracemoepy
