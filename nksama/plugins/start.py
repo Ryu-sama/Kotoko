@@ -8,7 +8,7 @@ from nksama import help_message
 
 
 @bot.on_message(
-    filters.command('start') | filters.command('start@KomiSanRobot'))
+    filters.command('start') | filters.command('start@KotokoIwanagaBot'))
 def start(_, message):
     try:
         if message.chat.type == "private":
@@ -30,13 +30,13 @@ def start(_, message):
                 grps.insert_one(grp)
 
     except Exception as e:
-        bot.send_message(-1001646296281, f"error in adding stats:\n\n{e}")
+        bot.send_message(-1001594147818, f"error in adding stats:\n\n{e}")
 
     if message.chat.type == "private" and not "help" in message.text:
 
         bot.send_message(
             message.chat.id,
-            f"Hello {message.from_user.mention} I'm [Komi-San](https://telegra.ph/file/b1026e0540bcda5090349.jpg)\nI'll help you to manage your groups",
+            f"Hello {message.from_user.mention} I'm Kotoko Iwanaga[.](https://telegra.ph/file/c34f0d3f93608eb5faa17.jpg)\nI'll help you to manage your groups at ease\nAdd Me in your Group with full rights i will be a good assistant!!",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton('help', callback_data="help")]]))
     if "help" in message.text:
@@ -46,4 +46,4 @@ def start(_, message):
                              InlineKeyboardButton('help', callback_data="help")
                          ]]))
     if not message.chat.type == "private":
-        message.reply("Hello there i'm komi-san")
+        message.reply("Here is my command help section!")
