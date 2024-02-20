@@ -28,10 +28,10 @@ def bothelp(_, message):
 
     else:
         bot.send_photo(message.chat.id,
-                       "https://telegra.ph/file/769474503795f6d4f406c.jpg",
+                       "https://telegra.ph/file/f7d8b244a4041fa1140e2.jpg",
                        caption=HELPP_TEXT,
                        reply_markup=InlineKeyboardMarkup([[
                            InlineKeyboardButton(
                                "Pm me for more details",
-                               url="t.me/komisanrobot?start=help")
+                               url="t.me/kotokoiwanagabot?start=help")
                        ]]))
